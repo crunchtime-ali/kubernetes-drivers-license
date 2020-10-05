@@ -1,5 +1,11 @@
 {
   "title": "Kubernetes Driver's License Part 1",
   "description": "",
-  "courses": []
+  "courses": [
+    {
+      "course_id": "first-scenario",
+      "title": "Kubernetes Setup",
+      "description": "Basic setup of a Kubernetes cluster"
+    }
+  ]
 }
