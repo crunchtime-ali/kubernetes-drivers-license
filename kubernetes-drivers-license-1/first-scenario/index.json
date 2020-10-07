@@ -25,6 +25,6 @@
     "uilayout": "editor-terminal-split"
   },
   "backend": {
-    "imageid": "kubernetes"
+    "imageid": "minikube"
   }
 }
