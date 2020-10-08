@@ -3,14 +3,14 @@
   "description": "",
   "courses": [
     {
-      "course_id": "1-first-scenario",
-      "title": "Kubernetes Setup",
-      "description": "Basic setup of a Kubernetes cluster"
+      "course_id": "kind-setup",
+      "title": "Kind Setup",
+      "description": "Das Setup eines lokalen Kind-Clusters"
     },
     {
-      "course_id": "2-second-scenario",
-      "title": "Kubernetes Usage",
-      "description": "Basic setup of a Kubernetes cluster"
+      "course_id": "namespaces",
+      "title": "Namespaces",
+      "description": "Die Benutzung von Namespaces"
     }
   ]
 }

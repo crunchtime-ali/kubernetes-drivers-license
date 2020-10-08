@@ -1,0 +1,32 @@
+{
+  "title": "Namespaces",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "10 minutes",
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  },
+  "details": {
+    "steps": [
+      {
+        "title": "Namespaces auflisten und erstellen",
+        "text": "step1.md"
+      },
+      {
+        "title": "Nützliche Optionen",
+        "text": "step2.md"
+      },
+      {
+        "title": "Namespaces- und Cluster-Objekte",
+        "text": "step3.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "setup-k8s.sh"
+    }
+  }
+}

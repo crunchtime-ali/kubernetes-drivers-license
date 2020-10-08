@@ -1,0 +1,1 @@
+In diesem Szenario lernen Sie den Umgang mit Namespaces.
