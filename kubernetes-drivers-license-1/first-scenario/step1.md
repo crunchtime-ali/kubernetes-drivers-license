@@ -1,5 +1,4 @@
-`kind` ist bereits installiert.
-Das kannst du überprüfen indem du `kind --version`{{execute}} aufrufst.
+`kind` wird zum Start des Szenarios installiert.Wenn es fertig ist, kannst du überprüfen ob es ordnungsgemäß installiert wurde indem du `kind --version`{{execute}} aufrufst.
 
 Das eigentliche Kubernetes Cluster erzeugst du mit `kind create cluster`{{execute}}
 
