@@ -1,8 +1,14 @@
 {
-  "title": "Basic setup",
+  "title": "Cluster setup",
   "description": "",
   "difficulty": "Beginner",
   "time": "20 minutes",
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "kind"
+  },
   "details": {
     "steps": [
       {
@@ -20,11 +26,5 @@
     "finish": {
       "text": "finish.md"
     }
-  },
-  "environment": {
-    "uilayout": "editor-terminal-split"
-  },
-  "backend": {
-    "imageid": "minikube"
   }
 }
