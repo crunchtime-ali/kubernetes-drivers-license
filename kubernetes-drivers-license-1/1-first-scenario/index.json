@@ -7,7 +7,7 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "golang:1.14"
+    "imageid": "docker"
   },
   "details": {
     "steps": [
