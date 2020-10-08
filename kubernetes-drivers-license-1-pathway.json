@@ -11,6 +11,11 @@
       "course_id": "namespaces",
       "title": "Namespaces",
       "description": "Die Benutzung von Namespaces"
+    },
+    {
+      "course_id": "pods-and-deployments",
+      "title": "Pods & Deployments",
+      "description": "Die Benutzung von Pods und Deployments"
     }
   ]
 }
