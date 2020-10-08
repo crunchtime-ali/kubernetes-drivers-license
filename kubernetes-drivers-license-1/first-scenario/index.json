@@ -9,7 +9,6 @@
   "backend": {
     "imageid": "golang:1.14"
   },
-  "code": "install-kind.sh",
   "details": {
     "steps": [
       {
@@ -22,7 +21,8 @@
       }
     ],
     "intro": {
-      "text": "intro.md"
+      "text": "intro.md",
+      "code": "install-kind.sh"
     }
   }
 }
