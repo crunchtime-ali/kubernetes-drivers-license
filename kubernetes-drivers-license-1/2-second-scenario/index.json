@@ -17,8 +17,7 @@
       }
     ],
     "intro": {
-      "text": "intro.md",
-      "code": "install-kind.sh"
+      "text": "intro.md"
     }
   }
 }
