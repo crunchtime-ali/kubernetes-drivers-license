@@ -1,0 +1,28 @@
+{
+  "title": "Kubernetes usage",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "10 minutes",
+  "environment": {
+    "uilayout": "terminal"
+  },
+  "backend": {
+    "imageid": "ubuntu:2004"
+  },
+  "details": {
+    "steps": [
+      {
+        "title": "Ein Cluster erstellen",
+        "text": "step1.md"
+      },
+      {
+        "title": "Entdecke das kind CLI",
+        "text": "step2.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "install-kind.sh"
+    }
+  }
+}

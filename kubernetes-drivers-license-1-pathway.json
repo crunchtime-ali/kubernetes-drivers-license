@@ -3,8 +3,13 @@
   "description": "",
   "courses": [
     {
-      "course_id": "first-scenario",
+      "course_id": "1-first-scenario",
       "title": "Kubernetes Setup",
+      "description": "Basic setup of a Kubernetes cluster"
+    },
+    {
+      "course_id": "2-second-scenario",
+      "title": "Kubernetes Usage",
       "description": "Basic setup of a Kubernetes cluster"
     }
   ]

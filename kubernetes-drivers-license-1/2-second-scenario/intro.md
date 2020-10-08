@@ -1,0 +1,1 @@
+Im Rahmen dieses Szenarios wird ein lokales Kubernetes Cluster mit [kind](https://kind.sigs.k8s.io/) aufgesetzt.
