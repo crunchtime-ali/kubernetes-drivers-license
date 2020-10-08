@@ -7,12 +7,12 @@ Lasst uns `kubectl` konfigurieren damit es mit dem eben erstellten Cluster inter
 `kubectl cluster-info --context kind-kind`{{execute}}
  
 Jetzt überprüfen wir den Status der Cluster Nodes:
-`kubectl get nodes`{execute}
+`kubectl get nodes`{{execute}}
 
 Super! In ca. 1 Minute sollte der Node Status von `NotReady` auf `Ready` springen.
 
 Wie sieht das in Docker aus?
 
-`docker ps`{execute}
+`docker ps`{{execute}}
 
 Super! Wir haben ein lauffähiges Kubernetes Cluster.
