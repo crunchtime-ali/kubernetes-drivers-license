@@ -4,7 +4,7 @@
   "difficulty": "Beginner",
   "time": "10 minutes",
   "environment": {
-    "uilayout": "editor-terminal"
+    "uilayout": "terminal"
   },
   "backend": {
     "imageid": "kind"
