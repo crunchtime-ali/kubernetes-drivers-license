@@ -7,7 +7,7 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "ubuntu:2004"
+    "imageid": "golang:1.14"
   },
   "details": {
     "steps": [

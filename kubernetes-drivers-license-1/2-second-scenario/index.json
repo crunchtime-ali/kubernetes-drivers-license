@@ -7,17 +7,13 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "ubuntu:2004"
+    "imageid": "golang:1.14"
   },
   "details": {
     "steps": [
       {
         "title": "Ein Cluster erstellen",
         "text": "step1.md"
-      },
-      {
-        "title": "Entdecke das kind CLI",
-        "text": "step2.md"
       }
     ],
     "intro": {
