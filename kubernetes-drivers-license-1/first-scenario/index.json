@@ -7,8 +7,9 @@
     "uilayout": "terminal"
   },
   "backend": {
-    "imageid": "kind"
+    "imageid": "golang:1.14"
   },
+  "code": "install-kind.sh",
   "details": {
     "steps": [
       {
