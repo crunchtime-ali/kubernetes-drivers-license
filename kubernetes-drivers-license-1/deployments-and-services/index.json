@@ -9,7 +9,6 @@
   "backend": {
     "imageid": "kubernetes-cluster-running:1.18"
   },
-  "files": [ "deployment.yaml", "service.yaml" ],
   "details": {
     "steps": [
       {
