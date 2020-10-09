@@ -15,4 +15,4 @@ Da alle Pods den gleichen Label Selektor haben werden sie load balanced hinter d
 HTTP Requests an den Port werden von unterschiedlichen Containern beantwortet.
 Probiere mehrfach `curl host01:30080` aus!
 
-*Tipp:* Du kannst Deployments auch über das `kubectl` CLI skalieren mit dem Befehl `kubectl scale deploy webapp1 --replicas=2`{{execute}}
+*Tipp:* Du kannst Deployments auch über das `kubectl` CLI skalieren mit dem Befehl `kubectl scale deploy webapp1 --replicas=2`{{execute}}.
