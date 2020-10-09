@@ -1,4 +1,5 @@
 #!/bin/bash
 
-eval "$(curl -sL https://raw.githubusercontent.com/travis-ci/gimme/master/gimme | GIMME_GO_VERSION=stable bash)" && export PATH=$PATH:$HOME/go/bin
-go get -u -v sigs.k8s.io/kind
+curl -Lo ./kind https://kind.sigs.k8s.io/dl/v0.9.0/kind-linux-amd64
+chmod +x ./kind
+mv kind /usr/local/bin

@@ -3,6 +3,7 @@
   "description": "",
   "difficulty": "Beginner",
   "time": "15 minutes",
+  "files": ["deployment.yaml", "service.yaml"],
   "environment": {
     "uilayout": "editor-terminal"
   },
