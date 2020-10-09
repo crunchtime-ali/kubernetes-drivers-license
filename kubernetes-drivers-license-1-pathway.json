@@ -3,11 +3,6 @@
   "description": "",
   "courses": [
     {
-      "course_id": "kind-setup",
-      "title": "Kind Setup",
-      "description": "Das Setup eines lokalen Kind-Clusters"
-    },
-    {
       "course_id": "namespaces",
       "title": "Namespaces",
       "description": "Die Benutzung von Namespaces"
@@ -16,6 +11,11 @@
       "course_id": "deployments-and-services",
       "title": "Deployments und Services",
       "description": "Die Benutzung von Deployments und Services"
+    },
+    {
+      "course_id": "kind-setup",
+      "title": "Kind Setup",
+      "description": "Das Setup eines lokalen Kind-Clusters"
     }
   ]
 }

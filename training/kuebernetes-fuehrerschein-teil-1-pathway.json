@@ -3,18 +3,25 @@
   "description": "",
   "courses": [
     {
-      "pathway_id": "istio",
-      "id": "workshop/deploying-istio",
-      "course_id": "deploying-istio",
-      "title": "Deploying Istio to Kubernetes",
-      "description": "Learn how to deploy Istio to a Kubernetes cluster"
+      "pathway_id": "crunchtime-ali",
+      "id": "kubernetes-drivers-license-1/namespaces",
+      "course_id": "namespaces",
+      "title": "Namespaces",
+      "description": ""
     },
     {
-      "pathway_id": "istio",
-      "id": "connecting-controlling-microservices/traffic-shaping",
-      "course_id": "traffic-shaping",
-      "title": "Connecting & Controlling: Traffic Shaping Microservices Connections",
-      "description": "Learn Load Balancing, Routes, Rules with Istio"
+      "pathway_id": "crunchtime-ali",
+      "id": "kubernetes-drivers-license-1/deployments-and-services",
+      "course_id": "deployments-and-services",
+      "title": "Deployments und Services",
+      "description": ""
+    },
+    {
+      "pathway_id": "crunchtime-ali",
+      "id": "kubernetes-drivers-license-1/kind-setup",
+      "course_id": "kind-setup",
+      "title": "Lokales Cluster Setup mit kind",
+      "description": ""
     }
   ]
 }
