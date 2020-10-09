@@ -2,7 +2,7 @@ Mit Services kontrolliert man wie Anwendungen miteinander kommunizieren. Damit k
 
 Kopiere die folgende Service Definition in den Editor. Der Service wählt alle Applicationen aus mit dem Label `webapp1`. Beim deployen von mehreren Replicas werden diese automatisch load balanced basierend auf dem gemeinsamen Label. Der Service macht die Applikation über einen `NodePort` verfügbar.
 
-```
+<pre class="file" data-filename="service.yaml">
 apiVersion: v1
 kind: Service
 metadata:
@@ -16,7 +16,7 @@ spec:
     nodePort: 30080
   selector:
     app: webapp1
-```{{open data-filename="service.yaml"}}
+</pre>
 
 Deploye den Service mit `kubectl create -f service.yaml`{{execute}}
 

@@ -1,6 +1,6 @@
 Kopiere die folgende YAML Definition in den Editor. Sie beschreibt wie die Applikation namens `webapp1` ausgeführt werden soll die das Docker Image `katacoda/docker-http-server` ausführt das auf Port 80 horcht.
 
-```
+<pre class="file" data-filename="deployment.yaml">
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -20,7 +20,7 @@ spec:
         image: katacoda/docker-http-server:latest
         ports:
         - containerPort: 80
-```{{open data-filename="deployment.yaml"}}
+</pre>
 
 Das wird in das Cluster deployed mit dem Befehlt `kubectl create-f deployment.yaml`{{execute}}.
 
