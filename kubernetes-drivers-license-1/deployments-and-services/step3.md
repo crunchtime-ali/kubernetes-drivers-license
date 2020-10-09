@@ -16,7 +16,7 @@ spec:
     nodePort: 30080
   selector:
     app: webapp1
-```
+```{{open data-filename="service.yaml"}}
 
 Deploye den Service mit `kubectl create -f service.yaml`{{execute}}
 

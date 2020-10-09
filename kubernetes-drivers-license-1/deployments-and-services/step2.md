@@ -20,7 +20,7 @@ spec:
         image: katacoda/docker-http-server:latest
         ports:
         - containerPort: 80
-```
+```{{open data-filename="deployment.yaml"}}
 
 Das wird in das Cluster deployed mit dem Befehlt `kubectl create-f deployment.yaml`{{execute}}.
 
