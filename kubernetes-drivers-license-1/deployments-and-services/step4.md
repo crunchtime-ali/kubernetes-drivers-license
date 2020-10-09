@@ -8,11 +8,11 @@ Deploye the aktualisierte YAML Datei mit `kubectl apply -f deployment.yaml`{{exe
 
 Der Zustand des Clusters wird sofort aktualisiert. Das siehst du mit `kubectl get deployment`{{execute}}.
 
-Weitere Pods werden eingeplant um den gewünschten Zustand herzustellen `kubectl get pods{{execute}}`
+Weitere Pods werden eingeplant um den gewünschten Zustand herzustellen `kubectl get pods`{{execute}}
 
 Da alle Pods den gleichen Label Selektor haben werden sie load balanced hinter dem Service NodePort deployt.
 
 HTTP Requests an den Port werden von unterschiedlichen Containern beantwortet.
-Probiere mehrfach `curl host01:30080` aus!
+Probiere mehrfach `curl host01:30080`{{execute}} aus!
 
 *Tipp:* Du kannst Deployments auch über das `kubectl` CLI skalieren mit dem Befehl `kubectl scale deploy webapp1 --replicas=2`{{execute}}.

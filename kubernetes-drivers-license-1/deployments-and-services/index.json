@@ -9,23 +9,12 @@
   "backend": {
     "imageid": "kubernetes-cluster-running:1.18"
   },
+  "files": [ "deployment.yaml", "service.yaml" ],
   "details": {
     "steps": [
       {
         "title": "Deployments mit kubectl erstellen",
         "text": "step1.md"
-      },
-      {
-        "title": "Deployments mit YAML erstellen",
-        "text": "step2.md"
-      },
-      {
-        "title": "Einen Service erstellen",
-        "text": "step3.md"
-      },
-      {
-        "title": "Das Deployment skalieren",
-        "text": "step4.md"
       }
     ],
     "intro": {
