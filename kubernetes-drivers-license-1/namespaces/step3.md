@@ -8,3 +8,7 @@ Die folgenden Befehle zeigen an welche Ressourcen zu einem Namespace gehören un
 
 ### Ressourcen im Cluster
 `kubectl api-resources --namespaced=false`{{execute}}
+
+Die Shortnames die in der Tabelle angezeigt werden, können an Stelle des vollständigen Namen der Ressource mit `kubectl` benutzt werden.
+
+Beispielsweise sind `kubectl get namespaces`{{execute}} und `kubectl get ns`{{execute}} äquivalent.

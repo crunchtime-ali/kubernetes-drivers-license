@@ -1,5 +1,5 @@
 {
-  "title": "Kubernetes Driver's License Part 1",
+  "title": "Kubernetes Führerschein Teil 1",
   "description": "",
   "courses": [
     {
@@ -13,9 +13,9 @@
       "description": "Die Benutzung von Namespaces"
     },
     {
-      "course_id": "pods-and-deployments",
-      "title": "Pods & Deployments",
-      "description": "Die Benutzung von Pods und Deployments"
+      "course_id": "deployments-and-services",
+      "title": "Deployments und Services",
+      "description": "Die Benutzung von Deployments und Services"
     }
   ]
 }

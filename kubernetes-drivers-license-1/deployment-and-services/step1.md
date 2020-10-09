@@ -1,3 +1,5 @@
+Das Deployment Objekt ist eines der gebräuchlichsten Kubernetes Objekte. Es definiert die Container Spezifikation, sowie den Namen und die Labels die in anderen Teilen von Kubernetes genutzt werden um sich mit einer Applikation zu verbinden.
+
 Wir erstellen ein Deployment das wiederrum einen Pod erzeugt mit:
 `kubectl create deployment mein-deployment --image=katacoda/docker-http-server`{{execute}}
 
@@ -7,7 +9,7 @@ Inspiziere auch das Deployment selbst näher mit `kubectl describe deployment me
 
 Sobald der Container läuft, kann er mit verschiedenen Netzwerk Optionen zugänglich gemacht werden. Eine Möglichkeit ist `NodePort`. Dabei wird dem Container dynamisch ein Port zugewiesen.
 
-`kubectl expose deployment mein-deployment --port=80 --type=NodePort`
+`kubectl expose deployment mein-deployment --port=80 --type=NodePort`{{execute}}
 
 Die Kommandos unten finden den zugewiesenen Port und führen einen HTTP Request mit `curl` durch
 

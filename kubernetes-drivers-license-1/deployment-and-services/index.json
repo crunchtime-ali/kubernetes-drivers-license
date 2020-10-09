@@ -4,7 +4,7 @@
   "difficulty": "Beginner",
   "time": "15 minutes",
   "environment": {
-    "uilayout": "terminal"
+    "uilayout": "editor-terminal"
   },
   "backend": {
     "imageid": "kubernetes-cluster-running:1.18"
@@ -12,16 +12,20 @@
   "details": {
     "steps": [
       {
-        "title": "Namespaces auflisten und erstellen",
+        "title": "Deployments mit kubectl erstellen",
         "text": "step1.md"
       },
       {
-        "title": "Nützliche Optionen",
+        "title": "Deployments mit YAML erstellen",
         "text": "step2.md"
       },
       {
-        "title": "Namespaces- und Cluster-Objekte",
+        "title": "Einen Service erstellen",
         "text": "step3.md"
+      },
+      {
+        "title": "Das Deployment skalieren",
+        "text": "step4.md"
       }
     ],
     "intro": {
