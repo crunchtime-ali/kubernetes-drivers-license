@@ -13,7 +13,8 @@
     "assets": {
       "host01": [
         {"file": "secret-env-pod.yaml", "target": "/root/"},
-        {"file": "secret-vol-pod.yaml", "target": "/root/"}
+        {"file": "secret-vol-pod.yaml", "target": "/root/"},
+        {"file": "configmap-pod.yaml", "target": "/root/"}
       ]
     },
     "steps": [
@@ -28,6 +29,10 @@
       {
         "title": "Secrets via Volumes konsumieren",
         "text": "step3.md"
+      },
+      {
+        "title": "Benutzung von ConfigMaps",
+        "text": "step4.md"
       }
     ],
     "intro": {

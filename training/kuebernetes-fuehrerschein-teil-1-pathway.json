@@ -18,6 +18,20 @@
     },
     {
       "pathway_id": "crunchtime-ali",
+      "id": "kubernetes-drivers-license-1/ingress-routing",
+      "course_id": "ingress-routing",
+      "title": "Ingress Routing",
+      "description": "Ingress Routing und Regeln für Services definieren"
+    },
+    {
+      "pathway_id": "crunchtime-ali",
+      "id": "kubernetes-drivers-license-1/secrets-and-configmaps",
+      "course_id": "secrets-and-configmaps",
+      "title": "Secrets & ConfigMaps",
+      "description": "Secrets & ConfigMaps erstellen und mounten"
+    },
+    {
+      "pathway_id": "crunchtime-ali",
       "id": "kubernetes-drivers-license-1/kind-setup",
       "course_id": "kind-setup",
       "title": "Lokales Cluster Setup mit kind",
