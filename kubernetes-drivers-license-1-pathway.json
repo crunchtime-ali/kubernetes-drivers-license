@@ -3,14 +3,14 @@
   "description": "",
   "courses": [
     {
-      "course_id": "pods",
-      "title": "Pods",
-      "description": "Die Benutzung von Pods"
-    },
-    {
       "course_id": "namespaces",
       "title": "Namespaces",
       "description": "Die Benutzung von Namespaces"
+    },
+    {
+      "course_id": "pods",
+      "title": "Pods",
+      "description": "Die Benutzung von Pods"
     },
     {
       "course_id": "deployments-and-services",

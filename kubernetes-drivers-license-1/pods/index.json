@@ -10,13 +10,18 @@
     "imageid": "kubernetes-cluster-running:1.18"
   },
   "details": {
+    "assets": {
+      "host01": [
+        {"file": "pod.yaml", "target": "/root/"}
+      ]
+    },
     "steps": [
       {
-        "title": "Einen Pod erstellen",
+        "title": "Einen Pod starten und Troubleshooting",
         "text": "step1.md"
       },
       {
-        "title": "Deployments mit YAML erstellen",
+        "title": "Pods mit YAML starten",
         "text": "step2.md"
       },
       {
