@@ -3,6 +3,11 @@
   "description": "",
   "courses": [
     {
+      "course_id": "pods",
+      "title": "Pods",
+      "description": "Die Benutzung von Pods"
+    },
+    {
       "course_id": "namespaces",
       "title": "Namespaces",
       "description": "Die Benutzung von Namespaces"
@@ -11,6 +16,11 @@
       "course_id": "deployments-and-services",
       "title": "Deployments und Services",
       "description": "Die Benutzung von Deployments und Services"
+    },
+    {
+      "course_id": "ingress-routing",
+      "title": "Ingress Routing",
+      "description": "Ingress Routing und Regeln für Services definieren"
     },
     {
       "course_id": "kind-setup",

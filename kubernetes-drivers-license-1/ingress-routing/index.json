@@ -1,0 +1,44 @@
+{
+  "title": "Ingress Routing",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "15 minutes",
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  },
+  "files": ["deployment.yaml", "ingress.yaml", "ingress-rules.yaml"],
+  "details": {
+    "assets": {
+      "host01": [
+        {"file": "deployment.yaml", "target": "/"},
+        {"file": "ingress.yaml", "target": "/"},
+        {"file": "ingress-rules.yaml", "target": "/"}
+      ]
+    },
+    "steps": [
+      {
+        "title": "Deployments erstellen",
+        "text": "step1.md"
+      },
+      {
+        "title": "Ingress deployen",
+        "text": "step2.md"
+      },
+      {
+        "title": "Ingress Regeln deployen",
+        "text": "step3.md"
+      },
+      {
+        "title": "Ingress Regeln testen",
+        "text": "step3.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "setup-k8s.sh"
+    }
+  }
+}

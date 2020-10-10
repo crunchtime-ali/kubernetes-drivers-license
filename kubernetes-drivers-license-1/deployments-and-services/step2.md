@@ -23,7 +23,7 @@ spec:
         - containerPort: 80
 </pre>
 
-Das wird in das Cluster deployed mit dem Befehlt `kubectl create-f deployment.yaml`{{execute}}.
+Das wird in das Cluster deployed mit dem Befehlt `kubectl create -f deployment.yaml`{{execute}}.
 
 Eine Liste der deployten Objekte kann abgerufen werden mit `kubectl get deploy`{{execute}}.
 
