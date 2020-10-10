@@ -1,0 +1,38 @@
+{
+  "title": "Secrets & ConfigMaps einsetzen",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "15 minutes",
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  },
+  "details": {
+    "assets": {
+      "host01": [
+        {"file": "secret-env-pod.yaml", "target": "/root/"},
+        {"file": "secret-vol-pod.yaml", "target": "/root/"}
+      ]
+    },
+    "steps": [
+      {
+        "title": "Secrets erstellen",
+        "text": "step1.md"
+      },
+      {
+        "title": "Secrets via Umgebungsvariablen konsumieren",
+        "text": "step2.md"
+      },
+      {
+        "title": "Secrets via Volumes konsumieren",
+        "text": "step3.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "setup-k8s.sh"
+    }
+  }
+}

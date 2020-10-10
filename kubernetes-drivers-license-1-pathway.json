@@ -14,13 +14,18 @@
     },
     {
       "course_id": "deployments-and-services",
-      "title": "Deployments und Services",
+      "title": "Deployments & Services",
       "description": "Die Benutzung von Deployments und Services"
     },
     {
       "course_id": "ingress-routing",
       "title": "Ingress Routing",
       "description": "Ingress Routing und Regeln für Services definieren"
+    },
+    {
+      "course_id": "secrets-and-configmaps",
+      "title": "Secrets & ConfigMaps",
+      "description": "Secrets erstellen und einsetzen"
     },
     {
       "course_id": "kind-setup",
