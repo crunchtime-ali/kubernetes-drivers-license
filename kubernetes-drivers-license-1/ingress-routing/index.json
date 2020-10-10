@@ -13,9 +13,9 @@
   "details": {
     "assets": {
       "host01": [
-        {"file": "deployment.yaml", "target": "/"},
-        {"file": "ingress.yaml", "target": "/"},
-        {"file": "ingress-rules.yaml", "target": "/"}
+        {"file": "deployment.yaml", "target": "/root/"},
+        {"file": "ingress.yaml", "target": "/root/"},
+        {"file": "ingress-rules.yaml", "target": "/root/"}
       ]
     },
     "steps": [
