@@ -26,7 +26,7 @@ metadata:
   namespace: nginx-ingress
 data:
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: nginx-ingress
@@ -62,6 +62,7 @@ spec:
               fieldPath: metadata.name
         args:
           - -nginx-configmaps=$(POD_NAMESPACE)/nginx-config
+          - --ingress-class=nginx
           - -default-server-tls-secret=$(POD_NAMESPACE)/default-server-secret
 ---
 apiVersion: v1
