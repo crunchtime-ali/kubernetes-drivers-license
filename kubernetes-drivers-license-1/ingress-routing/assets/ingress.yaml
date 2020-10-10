@@ -16,7 +16,8 @@ metadata:
   name: nginx-default-backend
 spec:
   selector:
-    app: nginx-default-backend
+    matchLabels:
+      app: nginx-default-backend
   replicas: 1
   template:
     metadata:
@@ -58,19 +59,16 @@ spec:
   - name: http
     port: 80
     targetPort: http
-  - name: https
-    port: 443
-    targetPort: https
 
 ---
-
 kind: Deployment
 apiVersion: apps/v1
 metadata:
   name: ingress-nginx
 spec:
   selector:
-    app: ingress-nginx
+    matchLabels:
+      app: ingress-nginx
   replicas: 1
   template:
     metadata:
@@ -85,9 +83,6 @@ spec:
         ports:
           - name: http
             containerPort: 80
-            protocol: TCP
-          - name: https
-            containerPort: 443
             protocol: TCP
         livenessProbe:
           httpGet:
