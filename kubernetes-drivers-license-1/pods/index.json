@@ -1,0 +1,32 @@
+{
+  "title": "Pods",
+  "description": "",
+  "difficulty": "Beginner",
+  "time": "15 minutes",
+  "environment": {
+    "uilayout": "editor-terminal"
+  },
+  "backend": {
+    "imageid": "kubernetes-cluster-running:1.18"
+  },
+  "details": {
+    "steps": [
+      {
+        "title": "Einen Pod erstellen",
+        "text": "step1.md"
+      },
+      {
+        "title": "Deployments mit YAML erstellen",
+        "text": "step2.md"
+      },
+      {
+        "title": "Troubleshooting",
+        "text": "step3.md"
+      }
+    ],
+    "intro": {
+      "text": "intro.md",
+      "code": "setup-k8s.sh"
+    }
+  }
+}
