@@ -1,5 +1,3 @@
-# Schritt 3 - Ingress Regeln deployen
-
 `Ingress` Regeln sind eine eigene Ressource in Kubernetes. Die Regeln können auf einem Hostnamen (Domainnamen), dem Pfad an den der Request geschickt wird oder eine Kombination aus beiden bestehen.
 
 Kopieren Sie die folgenden Regeln in die Datei `ingress-rules.yaml`{{open}}!

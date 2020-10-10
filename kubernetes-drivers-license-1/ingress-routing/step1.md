@@ -1,5 +1,3 @@
-## Schritt 1 - Deployments erstellen
-
 Um zu beginnen, musst du wieder einen HTTP Server deployen der das Ziel unserer Requests wird.  `deployment.yaml`{{open}} beinhält die drei Deployments `webapp1`, `webapp2` und `webapp3` mit jeweils einem Service.
 
 Du kannst den Inhalt der `deployment.yaml`{{open}} im Editor-Bereich sehen oder dir im Shell Bereich anzeigen lassen mit `cat deployment.yaml`{{execute}}

@@ -1,5 +1,3 @@
-# Schritt 2 - Ingress deployen
-
 Die YAML Datei `ingress.yaml`{{open}} definiert einen Nginx-basierten Ingress Controller zusammen mit einem Service der den Ingress Controller auf Port 80 für externe Verbindungen verfügbar macht.
 
 Darüber hinaus werden in der `ingress.yaml`{{open}} definiert:

@@ -9,7 +9,6 @@
   "backend": {
     "imageid": "kubernetes-cluster-running:1.18"
   },
-  "files": ["deployment.yaml", "ingress.yaml", "ingress-rules.yaml"],
   "details": {
     "assets": {
       "host01": [

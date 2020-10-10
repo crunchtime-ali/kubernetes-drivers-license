@@ -1,5 +1,3 @@
-# Schritt 4 - Ingress Regeln testen
-
 Wir testen ob die die Ingress Regeln den Traffic zu den entsprechenden Service routen indem wir jeweils einen Request hinschicken mit `curl`
 
 Der erste Request wird verarbeitet von dem `webapp1` Deployment.
