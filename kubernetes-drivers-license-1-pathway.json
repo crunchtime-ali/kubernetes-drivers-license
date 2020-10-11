@@ -10,12 +10,12 @@
     {
       "course_id": "pods",
       "title": "Pods",
-      "description": "Die Benutzung von Pods"
+      "description": "Die Benutzung von Pods und Troubleshooting"
     },
     {
       "course_id": "deployments-and-services",
       "title": "Deployments & Services",
-      "description": "Die Benutzung von Deployments und Services"
+      "description": "Der Umgang mit Deployment-Objekten und Services"
     },
     {
       "course_id": "ingress-routing",

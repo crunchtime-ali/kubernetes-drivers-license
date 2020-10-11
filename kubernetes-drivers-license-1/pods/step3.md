@@ -1,27 +1,70 @@
-Mit Services kontrolliert man wie Anwendungen miteinander kommunizieren. Damit kann man einen oder mehrere Pods über das Netzwerk bereitstellen.
+Das `kubelet` benutzt Liveness-Proben um kontinuierlich zu überprüfen ob ein `Pod` neu gestartet werden muss. Darüber hinaus wird mit Readiness-Proben überprüft ob ein `Pod` bereit ist Traffic zu empfangen.
 
-Kopiere die folgende Service Definition in den Editor. Der Service wählt alle Applicationen aus mit dem Label `webapp1`. Beim deployen von mehreren Replicas werden diese automatisch load balanced basierend auf dem gemeinsamen Label. Der Service macht die Applikation über einen `NodePort` verfügbar.
+Diese Proben können bspw. HTTP Requests sein die einen HTTP Status Code `200` liefern müssen:
 
-<pre class="file" data-filename="service.yaml">
+```
+livenessProbe:
+  httpGet:
+    path: /healthz
+    port: 8080
+```
+
+Es kann aber auch ein Befehl im `Pod` ausgeführt werden der einen Return-Code von 0 zurückliefern muss:
+
+```
+livenessProbe:
+  exec:
+    command:
+    - cat
+    - /tmp/healthy
+```
+
+Mit den folgenden Properties kann man das Verhalten genauer konfigurieren:
+- `periodSeconds` Anzahl der Sekunden die zwischen jeder Probe gewartet wird (Default: 10 Sekunden)
+- `initialDelaySecond` Anzahl der Sekunden die gewartet wird bis die Probe zum ersten Mal ausgeführt wird (Default: 1 Sekunde)
+- `timeoutSeconds` Anzahl der Sekunden nachdem die Probe einen Timeout meldet (Default: 1 Sekunde)
+- `failureTreshold` Anzahl der weiteren Proben (Default: 3) die nach einer fehlgeschlagenen Probe ausgeführt werden bis bei ...
+  - a) ... Liveness-Proben der Pod neugestartet wird
+  - b) ... Readiness-Proben der Status als `Unready` markiert wird
+
+Speichere und deploye die folgende `Pod` Definition als `pod-readiness.yaml{{open}}`.
+
+<pre class="file" data-filename="pod-readiness.yaml">
+# Hier kommt die YAML Beschreibung eines Pods rein
 apiVersion: v1
-kind: Service
+kind: Pod
 metadata:
-  name: webapp1-svc
-  labels:
-    app: webapp1
+  name: test-pod-3
 spec:
-  type: NodePort
-  ports:
-  - port: 80
-    nodePort: 30080
-  selector:
-    app: webapp1
+  containers:
+  - name: test-pod-nginx
+    image: nginx:alpine
+    ports:
+      - containerPort: 80
+    livenessProbe:
+      httpGet:
+        path: /
+        port: 8080
+      initialDelaySeconds: 5
+      periodSeconds: 3
+      failureThreshold: 2
+    readinessProbe:
+      httpGet:
+        path: /
+        port: 8080
+      initialDelaySeconds: 3
+      periodSeconds: 3
 </pre>
 
-Deploye den Service mit `kubectl create -f service.yaml`{{execute}}
+Überprüfe nach dem deployen den Status des `Pods`. Hilfreich ist hierbei der `watch` Befehl mit dem du kontinuierlich einen Bash-Befehl wiederholen kannst. `watch kubectl get pods `{{execute}}.
+Nach zwei fehlgeschlagenenen Neustarts und Liveness-Proben hat der Pod den Status `CrashLoopBackOff`.
+Beende den `watch` Befehl mit `STRG + C`.
 
-Rufe wie zuvor Details zu allen Service Objekten im aktuellen Namespace auf mit `kubectl get svc -o wide`{{execute}}. Mit der `-o wide` Option bekommst du bei `get` Befehlen zusätzliche Informationen zu den Objekten.
+### Aufgaben
 
-Genaue Informationen zu einem einzelnen Service-Objekt kannst du mit `kubectl describe svc webapp1-svc`{{execute}} bekommen.
+Korrigiere die beiden Fehler die sich bei dieser Pod-Definition eingeschlichen haben und stelle sicher, dass der Pod `Ready` und `Running` ist.
 
-Führe noch einen HTTP Request gegen den Service aus mit `curl host01:30080`{{execute}}!
+*Tipp:* Schaue dir mal die Ports der Liveness- und Readiness-Probe an.
+
+Du kannst die Kubernetes Ressource direkt mit `kubectl edit pod test-pod-3` editieren. Nach dem Speichern (erst `Escape` drücken, dann `:wq` und abschließend `Enter`) werden die Änderungen der auf den bestehenden Pod durchgeführt.
+

@@ -7,14 +7,21 @@
       "id": "kubernetes-drivers-license-1/namespaces",
       "course_id": "namespaces",
       "title": "Namespaces",
-      "description": ""
+      "description": "Die Benutzung von Namespaces"
+    },
+    {
+      "pathway_id": "crunchtime-ali",
+      "id": "kubernetes-drivers-license-1/pods",
+      "course_id": "pods",
+      "title": "Pods",
+      "description": "Die Benutzung von Pods und Troubleshooting"
     },
     {
       "pathway_id": "crunchtime-ali",
       "id": "kubernetes-drivers-license-1/deployments-and-services",
       "course_id": "deployments-and-services",
       "title": "Deployments und Services",
-      "description": ""
+      "description": "Der Umgang mit Deployment-Objekten und Services"
     },
     {
       "pathway_id": "crunchtime-ali",
@@ -35,7 +42,7 @@
       "id": "kubernetes-drivers-license-1/kind-setup",
       "course_id": "kind-setup",
       "title": "Lokales Cluster Setup mit kind",
-      "description": ""
+      "description": "Setup eines lokalen Kubernetes Cluster mit Kubernetes in Docker"
     }
   ]
 }

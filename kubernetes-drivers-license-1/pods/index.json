@@ -12,7 +12,8 @@
   "details": {
     "assets": {
       "host01": [
-        {"file": "pod.yaml", "target": "/root/"}
+        {"file": "pod.yaml", "target": "/root/"},
+        {"file": "pod-readiness.yaml", "target": "/root/"}
       ]
     },
     "steps": [
@@ -25,7 +26,7 @@
         "text": "step2.md"
       },
       {
-        "title": "Troubleshooting",
+        "title": "Readiness und Liveness Proben",
         "text": "step3.md"
       }
     ],
