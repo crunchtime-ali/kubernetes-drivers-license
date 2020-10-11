@@ -4,5 +4,5 @@ Den Inhalt der Datei `ingress.yaml`{{open}} im Editor-Bereich sehen oder dir im 
 
 Deploye den Ingress Controller wie andere Kubernetes Objekte mit `kubectl apply -f ingress.yaml`{{execute}}
 
-Warte bis das Deployment bereit ist. Du kannst den Bash-Befehle kontinuierlich wiederholen lassen indem du ihnen den `watch` Befehl voranstellst. `watch kubectl get deployment `{{execute}}.
+Warte bis das Deployment bereit ist bspw. mit  `watch kubectl get deployment `{{execute}}.
 Sobald der `ingress-nginx` und `nginx-default-backend` `Ready` sind, kannst du den `watch` Befehl mit `STRG + C` beenden.
