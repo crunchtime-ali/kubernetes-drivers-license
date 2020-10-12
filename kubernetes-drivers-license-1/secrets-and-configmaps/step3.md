@@ -45,6 +45,6 @@ Der Inhalt der Datei ist die dekodierte Zeichenkette des `Secrets`.
 Um auf die beiden hier verwendeten Secretes zuzugreifen würde man die folgenden Befehle nutzen 
 
 ```
-kubectl exec -it secret-vol-pod cat -- /etc/secret-volume/username; echo
-kubectl exec -it secret-vol-pod cat -- /etc/secret-volume/password; echo
+kubectl exec -it secret-vol-pod -- cat /etc/secret-volume/username; echo
+kubectl exec -it secret-vol-pod -- cat /etc/secret-volume/password; echo
 ```{{execute}}

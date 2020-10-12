@@ -39,4 +39,4 @@ valueFrom:
 Starte den Pod mit `kubectl apply -f secret-env-pod.yaml`{{execute}}!
 Sobald der Pod gestartet ist, kannst du dir die beiden Umgebungsvariablen ansehen mit `kubectl exec -it secret-env-pod -- env | grep SECRET_; echo`{{execute}}
 
-Hier dekodiert Kubernetes die base64 Zeichenketten automatisch wenn sie in die Umgebungsvariablen übertragen werden. Es sollte die ursprüngliche Benutzername/Passwort Kombination angeueogt werden. Diese Variablen können jetzt für API-Zugriffe, Datenbanken o.Ä. genutzt werden.
+Hier dekodiert Kubernetes die base64 Zeichenketten automatisch wenn sie in die Umgebungsvariablen übertragen werden. Es sollte die ursprüngliche Benutzername/Passwort Kombination angezeigt werden. Diese Variablen können jetzt für API-Zugriffe, Datenbanken o.Ä. genutzt werden.

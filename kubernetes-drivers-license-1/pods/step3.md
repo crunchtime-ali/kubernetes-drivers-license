@@ -27,7 +27,7 @@ Mit den folgenden Properties kann man das Verhalten genauer konfigurieren:
   - a) ... Liveness-Proben der Pod neugestartet wird
   - b) ... Readiness-Proben der Status als `Unready` markiert wird
 
-Speichere und deploye die folgende `Pod` Definition als `pod-readiness.yaml{{open}}`.
+Speichere und deploye die folgende `Pod` Definition als `pod-readiness.yaml`{{open}}.
 
 <pre class="file" data-filename="pod-readiness.yaml">
 # Hier kommt die YAML Beschreibung eines Pods rein

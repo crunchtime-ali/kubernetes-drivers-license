@@ -15,7 +15,7 @@ Die Kommandos unten finden den zugewiesenen Port und führen einen HTTP Request 
 
 ```
 export PORT=$(kubectl get svc mein-deployment -o go-template='{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}')
-echo "Accessing host01:$PORT"
+echo "Accessing host01:${PORT}"
 curl host01:$PORT
 ```{{execute}}
 
