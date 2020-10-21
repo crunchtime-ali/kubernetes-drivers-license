@@ -22,7 +22,8 @@
     ],
     "intro": {
       "text": "intro.md",
-      "code": "install-kind.sh"
+      "code": "install-kind.sh",
+      "background": "download-kind-image.sh"
     }
   }
 }

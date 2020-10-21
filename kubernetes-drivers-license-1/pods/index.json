@@ -22,12 +22,20 @@
         "text": "step1.md"
       },
       {
-        "title": "Pods mit YAML starten",
+        "title": "Problem: Pending Pod",
         "text": "step2.md"
       },
       {
-        "title": "Readiness und Liveness Proben",
+        "title": "Lösung: Pending Pod",
         "text": "step3.md"
+      },
+      {
+        "title": "Problem: Pod wird nicht ready",
+        "text": "step4.md"
+      },
+      {
+        "title": "Lösung: Pod wird nicht ready",
+        "text": "step5.md"
       }
     ],
     "intro": {

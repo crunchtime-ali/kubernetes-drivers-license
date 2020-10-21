@@ -30,7 +30,7 @@ Die Logs des Pods kannst du mit `kubectl logs test-pod`{{execute}} ausgeben lass
 Du kannst Befehle in einem Pod ausführen mit `kubectl exec test-pod -- cat /etc/nginx/nginx.conf`{{execute}}. Hier lassen wir uns eine Konfigurationsdatei ausgeben.
 
 Zur Fehlersuche ist es oft hilfreich sich interaktiv mit einem Container zu verbinden. Dies kannst du mit den `-it` Optionen machen und unter Angabe einer Shell als Kommando (z.B. `bash`). Bei dem gestarteten `Pod` handelt es sich um ein `Alpine` Image. Hier steht nicht `bash` zur Verfügung sondern lediglich `sh` und `ash`.
-Führe `kubectl exec -it test-pod -- ash`{{execute}} aus und führe einige Befehle in dem `Pod` aus. Wenn du bereit bist weiter zu machen, drücke bitte `STRG + d` um die interaktive Session zu trennen.
+Führe `kubectl exec -it test-pod -- /bin/sh`{{execute}} aus und führe einige Befehle in dem `Pod` aus. Wenn du bereit bist weiter zu machen, drücke bitte `STRG + d` um die interaktive Session zu trennen.
 
 ### Einen Pod beenden
 

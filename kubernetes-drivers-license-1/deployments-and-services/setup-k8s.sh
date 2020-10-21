@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 touch deployment.yaml
 touch service.yaml
 
