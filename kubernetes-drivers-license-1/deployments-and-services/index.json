@@ -25,12 +25,8 @@
         "text": "step3.md"
       },
       {
-        "title": "Problem: das Deployment skalieren",
+        "title": "Deployments skalieren",
         "text": "step4.md"
-      },
-      {
-        "title": "Lösung: das Deployment skalieren",
-        "text": "step5.md"
       }
     ],
     "intro": {

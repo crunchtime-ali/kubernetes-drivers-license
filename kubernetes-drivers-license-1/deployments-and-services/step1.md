@@ -7,16 +7,11 @@ Den Status des Deployments kannst du mit `kubectl get pods`{{execute}} abrufen.
 
 Inspiziere auch das Deployment selbst näher mit `kubectl describe deployment mein-deployment`{{execute}}. 
 
-Sobald der Container läuft, kann er mit verschiedenen Netzwerk Optionen zugänglich gemacht werden. Eine Möglichkeit ist `NodePort`. Dabei wird dem Container dynamisch ein Port zugewiesen.
+Sobald der Container läuft, kann er mit verschiedenen Netzwerk Optionen zugänglich gemacht werden. Eine Möglichkeit ist es einen Port-Forward zu erstellen. Dabei wird ein lokaler Port auf einen Port im Deployment gemapped.
 
-`kubectl expose deployment mein-deployment --port=80 --type=NodePort`{{execute}}
+`kubectl port-forward deployment/mein-deployment 8080:80`{{execute}}
 
-Die Kommandos unten finden den zugewiesenen Port und führen einen HTTP Request mit `curl` durch
+Da kubectl den Port-Forward im Vordergrund ausführt, musst du ein neues Terminal öffnen mit `+` neben dem Tab-Namen und dann `Open New Terminal`.
 
-```
-export PORT=$(kubectl get svc mein-deployment -o go-template='{{range.spec.ports}}{{if .nodePort}}{{.nodePort}}{{"\n"}}{{end}}{{end}}')
-echo "Accessing host01:${PORT}"
-curl host01:$PORT
-```{{execute}}
-
+In diesem Terminal kannst du dann mit `curl host01:8080`{{execute}} einen Request gegen das Deployment starten.
 Der Container den wir über das Deployment gestartet haben, verarbeitet diese Anfrage und antwortet darauf.

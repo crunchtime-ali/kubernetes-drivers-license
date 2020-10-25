@@ -10,10 +10,9 @@ metadata:
   labels:
     app: webapp1
 spec:
-  type: NodePort
+  type: ClusterIP
   ports:
   - port: 80
-    nodePort: 30080
   selector:
     app: webapp1
 </pre>
@@ -24,4 +23,6 @@ Rufe wie zuvor Details zu allen Service Objekten im aktuellen Namespace auf mit 
 
 Genaue Informationen zu einem einzelnen Service-Objekt kannst du mit `kubectl describe svc webapp1-svc`{{execute}} bekommen.
 
-Führe noch einen HTTP Request gegen den Service aus mit `curl host01:30080`{{execute}}!
+Beende den Port-Forward im ersten Tab indem du `STRG + C` gleichzeitig drückst und erstelle einen neuen Port-Forward gegen den soeben erstellten Service mit `kubectl port-forward service/webapp1-svc 8080:80`{{execute}}.
+
+Führe in dem anderen Tab einen HTTP Request gegen den Service aus mit `curl host01:8080`{{execute}}.
