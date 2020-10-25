@@ -31,8 +31,12 @@
         "text": "step3.md"
       },
       {
-        "title": "Benutzung von ConfigMaps",
+        "title": "Aufgabe: Benutzung von ConfigMaps",
         "text": "step4.md"
+      },
+      {
+        "title": "Lösung: Benutzung von ConfigMaps",
+        "text": "step5.md"
       }
     ],
     "intro": {

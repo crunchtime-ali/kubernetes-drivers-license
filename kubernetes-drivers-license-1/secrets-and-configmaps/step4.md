@@ -31,6 +31,6 @@ data:
   databaseName: "test-db"
 </pre>
 
-Kontrolliere anschließend mit folgendem Befehl ob das mounten als Umgebungsvariable erfolgreich war `kubectl exec -it webapp-env -- env | grep DATABASE_; echo`{{execute}}.
+Kontrolliere anschließend mit folgendem Befehl ob das mounten als Umgebungsvariable erfolgreich war `kubectl exec -it webapp-env -- env | grep DATABASE_`{{execute}}.
 
 Das mounten von `ConfigMaps` als Dateien funktioniert sehr ähnlich, wird hier aber aus Zeitgründen nicht demonstriert.
