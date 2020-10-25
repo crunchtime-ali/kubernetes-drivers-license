@@ -4,33 +4,33 @@ Der folgende Auszug aus einer Pod-Definition zeigt, dass beim mounten von Umgebu
 
 ```
 env:
-  - name: DATABASE_USERNAME
+  - name: DATABASE_NAME
     valueFrom:
       secretKeyRef:
         name: test-secret
-        key: databaseUsername
+        key: databasName
   - name: DATABASE_TYPE
     valueFrom:
       configMapKeyRef:
-        name: app-configmap
+        name: app-config
         key: databaseType
 ```
 
-## Aufgabe:
-Erstelle die `ConfigMap` unten als `test-configmap.yaml`{{open}} und mounte sie in den bereits bestehenden `Pod` `webapp-env` der in der Datei `webapp-env.yaml`{{open}} beschrieben wird.
+### Aufgabe
+Erstelle die `ConfigMap` unten als `app-config.yaml`{{open}} und mounte sie in den bereits bestehenden `Pod` `webapp-env` der in der Datei `webapp-env.yaml`{{open}} beschrieben wird.
 Den Pod kannst du aktualisieren indem du `kubectl apply -f webapp-env.yaml`{{execute}} ausführst. 
 Mounte die folgende `ConfigMap` als Umgebungsvariable. Starte den `Pod` neu um sicherzustellen, dass die neue Konfiguration verwendet wird.
 
-<pre class="file" data-filename="test-configmap.yaml">
+<pre class="file" data-filename="app-config.yaml">
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: test-configmap
+  name: app-config
 data:
   databaseType: "postgres"
   databaseName: "test-db"
 </pre>
 
-Kontrolliere anschließend mit folgendem Befehl ob das mounten als Umgebungsvariable erfolgreich war `kubectl exec -it webapp-env -- env | grep CONFIG_; echo`{{execute}}.
+Kontrolliere anschließend mit folgendem Befehl ob das mounten als Umgebungsvariable erfolgreich war `kubectl exec -it webapp-env -- env | grep DATABASE_; echo`{{execute}}.
 
 Das mounten von `ConfigMaps` als Dateien funktioniert sehr ähnlich, wird hier aber aus Zeitgründen nicht demonstriert.

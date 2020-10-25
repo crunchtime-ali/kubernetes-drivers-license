@@ -29,6 +29,7 @@ Mit `kubectl apply -f pod.yaml`{{execute}} kannst du die YAML Datei zur Verarbei
 
 Führe nun wiederholt `kubectl get pods`{{execute}} aus um den Status zu überprüfen. Dieser bleibt bei `Pending`.
 
-*Aufgabe:* Versuche mit Hilfe der bereits vorgestellten Befehle die Ursache zu ermitteln. Ändere dann die `pod.yaml`{{open}} entsprechend. **Achtung:** Du musst den Pod löschen (`kubectl delete pod test-pod-2`{{execute}} bevor die YAML-Datei nochmal via `kubectl apply -f pod.yaml`{{execute}} verarbeiten lässt.
+### Aufgabe
+Versuche mit Hilfe der bereits vorgestellten Befehle die Ursache zu ermitteln. Ändere dann die `pod.yaml`{{open}} entsprechend. **Achtung:** Du musst den Pod löschen (`kubectl delete pod test-pod-2`{{execute}} bevor die YAML-Datei nochmal via `kubectl apply -f pod.yaml`{{execute}} verarbeiten lässt.
 
 *Hinweis:* Die Lösung findest du im nächsten Step.

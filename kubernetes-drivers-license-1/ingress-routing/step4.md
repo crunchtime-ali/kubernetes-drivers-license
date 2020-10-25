@@ -6,6 +6,6 @@ Der erste Request wird verarbeitet von dem `webapp-admin` Deployment.
 
 `curl -H "Host: my.kubernetes.example" host01:30080/admin`{{execute}}
 
-Alle weiteren Request werden verarbeitet von dem `webapp3` Deployment.
+Alle weiteren Request werden verarbeitet von dem `webapp-customer` Deployment.
 
 `curl -H "Host: my.kubernetes.example" host01:30080`{{execute}}

@@ -60,10 +60,10 @@ spec:
 Nach zwei fehlgeschlagenenen Neustarts und Liveness-Proben hat der Pod den Status `CrashLoopBackOff`.
 Beende den `watch` Befehl mit `STRG + C`.
 
-### Aufgaben
+### Aufgabe
 
 Korrigiere die beiden Fehler die sich bei dieser Pod-Definition eingeschlichen haben und stelle sicher, dass der Pod `Ready` und `Running` ist.
 
 *Tipp:* Schaue dir mal die Ports der Liveness- und Readiness-Probe an.
 
-*Tipp:* Du kannst die Kubernetes Ressource direkt mit `kubectl edit pod test-pod-3` editieren. Nach dem Speichern (erst `Escape` drücken, dann `:wq` und abschließend `Enter`) werden die Änderungen der auf den bestehenden Pod durchgeführt.
+*Tipp:* An einem bestehenden Pod kannst du Liveness- und Readiness-Probe nicht ändern. Daher musst du den bestehenden Pod erst löschen mit `kubectl delete pod test-pod-3`{{execute}}

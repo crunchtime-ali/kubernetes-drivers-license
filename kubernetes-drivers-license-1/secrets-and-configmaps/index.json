@@ -14,7 +14,7 @@
       "host01": [
         {"file": "webapp-env.yaml", "target": "/root/"},
         {"file": "webapp-vol.yaml", "target": "/root/"},
-        {"file": "configmap-pod.yaml", "target": "/root/"}
+        {"file": "app-config.yaml", "target": "/root/"}
       ]
     },
     "steps": [

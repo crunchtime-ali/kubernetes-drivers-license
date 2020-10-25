@@ -37,13 +37,11 @@ volumeMounts:
    mountPath: /etc/secret-volume
 ```
 
-Erstelle den neuen Pod mit `kubectl apply -f secret-vol-pod.yaml`{{execute}}!
-Sobald dieser mit dem gemounteten `Secret`  gestartet ist, kannst du dir bspw. die verfügbaren `Secrets` auflisten lassen mit `kubectl exec -it secret-vol-pod -- ls /etc/secret-volume`{{execute}}
+Erstelle den neuen Pod mit `kubectl apply -f webapp-vol.yaml`{{execute}}!
+Sobald dieser mit dem gemounteten `Secret`  gestartet ist, kannst du dir bspw. die verfügbaren `Secrets` auflisten lassen mit `kubectl exec -it webapp-vol -- ls /etc/secret-volume`{{execute}}
 
 Der Inhalt der Datei ist die dekodierte Zeichenkette des `Secrets`. 
 Um auf die beiden hier verwendeten Secretes zuzugreifen würde man die folgenden Befehle nutzen 
 
-```
-kubectl exec -it webapp-vol -- cat /etc/secret-volume/username; echo
-kubectl exec -it webapp-vol -- cat /etc/secret-volume/password; echo
-```{{execute}}
+`kubectl exec -it webapp-vol -- cat /etc/secret-volume/username; echo`{{execute}}
+`kubectl exec -it webapp-vol -- cat /etc/secret-volume/password; echo`{{execute}}

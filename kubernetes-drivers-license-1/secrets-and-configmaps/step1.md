@@ -9,10 +9,11 @@ PASSWORD=$(echo -n "mein-test-passwort" | base64)
 In der YAML Definition des `Secrets` unten verwenden wir die soeben definierten Variablen.
 Über die Key/Value Paare können wir auf die einzelnen Werte über den Namen des `Secrets` zugreifen, in diesem Fall `test-secret`
 
-Der folgende Befehl leitet die Secret-Definition mit eingesetzten Variablen in die Datei `secret.yaml`{{open}}` um.
+Der folgende Befehl leitet die Secret-Definition mit eingesetzten Variablen in die Datei secret.yaml um.
 
 ```
-echo "apiVersion: v1
+echo "
+apiVersion: v1
 kind: Secret
 metadata:
   name: test-secret

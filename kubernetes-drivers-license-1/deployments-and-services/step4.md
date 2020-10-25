@@ -11,8 +11,10 @@ Der Zustand des Clusters wird sofort aktualisiert. Das siehst du mit `kubectl ge
 Weitere Pods werden eingeplant um den gewünschten Zustand herzustellen `kubectl get pods`{{execute}}
 
 Da alle Pods den gleichen Label Selektor haben werden sie load balanced hinter dem Service deployed.
-HTTP Requests an den weitergeleiteten Port 8080 werden von unterschiedlichen Containern beantwortet.
-Probiere mehrfach `curl host01:8080`{{execute}} aus!
+HTTP Requests an den weitergeleiteten Port 8080 werden in unserem Beispiel jedoch stets von dem selben Container beantwortet weil Port-Forwards direkt die IP eines Containers des Service auflösen.
+Probiere mehrfach `curl host01:8080`{{execute}} aus.
+
+*Tipp:* Du kannst die Kubernetes Ressource direkt mit `kubectl edit deployment webapp-1` editieren. Nach dem Speichern (erst `Escape` drücken, dann `:wq` und abschließend `Enter`) werden die Änderungen auf die bestehende Ressourcen angewandt.
 
 *Tipp:* Du kannst Deployments auch über das `kubectl` CLI skalieren mit dem Befehl `kubectl scale deploy webapp1 --replicas=2`{{execute}}.
 
