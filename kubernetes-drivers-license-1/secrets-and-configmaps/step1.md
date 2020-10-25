@@ -12,8 +12,7 @@ In der YAML Definition des `Secrets` unten verwenden wir die soeben definierten 
 Der folgende Befehl leitet die Secret-Definition mit eingesetzten Variablen in die Datei secret.yaml um.
 
 ```
-echo "
-apiVersion: v1
+echo "apiVersion: v1
 kind: Secret
 metadata:
   name: test-secret
