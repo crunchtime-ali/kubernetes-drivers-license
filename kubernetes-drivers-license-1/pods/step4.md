@@ -66,5 +66,4 @@ Korrigiere die beiden Fehler die sich bei dieser Pod-Definition eingeschlichen h
 
 *Tipp:* Schaue dir mal die Ports der Liveness- und Readiness-Probe an.
 
-Du kannst die Kubernetes Ressource direkt mit `kubectl edit pod test-pod-3` editieren. Nach dem Speichern (erst `Escape` drücken, dann `:wq` und abschließend `Enter`) werden die Änderungen der auf den bestehenden Pod durchgeführt.
-
+*Tipp:* Du kannst die Kubernetes Ressource direkt mit `kubectl edit pod test-pod-3` editieren. Nach dem Speichern (erst `Escape` drücken, dann `:wq` und abschließend `Enter`) werden die Änderungen der auf den bestehenden Pod durchgeführt.

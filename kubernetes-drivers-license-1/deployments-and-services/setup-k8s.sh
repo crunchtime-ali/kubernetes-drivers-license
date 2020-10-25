@@ -3,5 +3,6 @@ touch deployment.yaml
 touch service.yaml
 
 launch.sh
-kubectl config set-context --current --namespace=default
+kubectl create namespace scenario-deployments
+kubectl config set-context --current --namespace=scenario-deployments
 alias k=kubectl
