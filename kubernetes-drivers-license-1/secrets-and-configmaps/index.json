@@ -12,8 +12,8 @@
   "details": {
     "assets": {
       "host01": [
-        {"file": "secret-env-pod.yaml", "target": "/root/"},
-        {"file": "secret-vol-pod.yaml", "target": "/root/"},
+        {"file": "webapp-env.yaml", "target": "/root/"},
+        {"file": "webapp-vol.yaml", "target": "/root/"},
         {"file": "configmap-pod.yaml", "target": "/root/"}
       ]
     },

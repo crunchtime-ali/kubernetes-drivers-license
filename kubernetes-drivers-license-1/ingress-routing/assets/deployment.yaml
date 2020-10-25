@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp1
+  name: webapp-customer
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: webapp1
+      app: webapp-customer
   template:
     metadata:
       labels:
         app: webapp1
     spec:
       containers:
-      - name: webapp1
+      - name: webapp-customer
         image: katacoda/docker-http-server:latest
         ports:
         - containerPort: 80
@@ -21,39 +21,19 @@ spec:
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: webapp2
+  name: webapp-admin
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: webapp2
+      app: webapp-admin
   template:
     metadata:
       labels:
-        app: webapp2
+        app: webapp-admin
     spec:
       containers:
-      - name: webapp2
-        image: katacoda/docker-http-server:latest
-        ports:
-        - containerPort: 80
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: webapp3
-spec:
-  selector:
-    matchLabels:
-      app: webapp3
-  replicas: 1
-  template:
-    metadata:
-      labels:
-        app: webapp3
-    spec:
-      containers:
-      - name: webapp3
+      - name: webapp-admin
         image: katacoda/docker-http-server:latest
         ports:
         - containerPort: 80
@@ -61,35 +41,23 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: webapp1-svc
+  name: webapp-customer
   labels:
-    app: webapp1
+    app: webapp-customer
 spec:
   ports:
   - port: 80
   selector:
-    app: webapp1
+    app: webapp-customer
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: webapp2-svc
+  name: webapp-admin
   labels:
-    app: webapp2
+    app: webapp-admin
 spec:
   ports:
   - port: 80
   selector:
-    app: webapp2
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: webapp3-svc
-  labels:
-    app: webapp3
-spec:
-  ports:
-  - port: 80
-  selector:
-    app: webapp3
+    app: webapp-admin

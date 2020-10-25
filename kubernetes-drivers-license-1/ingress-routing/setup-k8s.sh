@@ -1,5 +1,6 @@
 #!/bin/bash
 
 launch.sh
-kubectl config set-context --current --namespace=default
+kubectl create namespace scenario-ingresses
+kubectl config set-context --current --namespace=scenario-ingresses
 alias k=kubectl

@@ -12,24 +12,20 @@ spec:
   - host: my.kubernetes.example
     http:
       paths:
-      - path: /webapp1
+      - path: /admin
         backend:
-          serviceName: webapp1-svc
-          servicePort: 80
-      - path: /webapp2
-        backend:
-          serviceName: webapp2-svc
+          serviceName: webapp-admin
           servicePort: 80
       - backend:
-          serviceName: webapp3-svc
+          serviceName: webapp-customer
           servicePort: 80
 </pre>
 
 Die Regeln werden auf Requests für den Host `my.kubernetes.example` angewandet.
-Requests zum Pfad `/webapp1` werden an den Service `webapp1-svc` weitergeleitet. Analog dazu werden Requests zu `/webapp2` zu `webapp2-svc`weitergeleitet.
-Die dritte Regel ist eine `Catch-All` Route die Requests auf die keine der bisherigen Regeln angewandt werden konnte nach `webapp3-svc` weiterleitet.
+Requests zum Pfad `/admin` werden an den Service `webapp-admin` weitergeleitet. 
+Die zweite Regel ist eine `Catch-All` Route die Requests auf die keine der bisherigen Regeln angewandt werden konnte nach `webapp-customer` weiterleitet.
 
 Damit wird veranschaulicht wie die URL Struktur einer Applikation unabhängig von den unterliegenden Services konfiguriert werden kann.
 
-Deployen Sie die gespeicherte Datei mit `kubectl apply -f ingress-rules.yaml`{{execute}}
-Den Status der Ingress Regeln wird abgerufen mit `kubectl get ing`{{execute}}.
+Deploye die gespeicherte Datei mit `kubectl apply -f ingress-rules.yaml`{{execute}}
+Informationen zu den Ingress-Regeln bekommst du mit `kubectl get ing`{{execute}}.

@@ -52,13 +52,14 @@ apiVersion: v1
 metadata:
   name: ingress-nginx
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: ingress-nginx
   ports:
   - name: http
     port: 80
     targetPort: http
+    nodePort: 30080
 
 ---
 kind: Deployment
